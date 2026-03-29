@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav>
+  <span class="logo">Nkem Vincent</span>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="nc btn" style="padding:8px 18px;font-size:13px" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+<script>
+function toggleNav(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('nav-overlay').classList.toggle('open');}
+function closeNav(){document.getElementById('nav-links').classList.remove('open');document.getElementById('nav-overlay').classList.remove('open');}
+</script>
+<section class="hero" id="hero" ><div class="hi"><div class="avp">N</div><h1>Nkem Vincent Nweke</h1><p class="jt">Computer Science Student at African Leadership University</p><p class="tl">Passionate about building products that matter. Open to internships and grad roles.</p><div class="hc"><a href="#projects" class="btn">See my projects</a><a href="#contact" class="btn btn-o">Get in touch</a></div></div></section>
+<section class="about" id="about" style="background:#f0f9ff;color:inherit"><div class="c"><div class="ag"><div><h2>About me</h2><p>Third-year CS student specialising in machine learning and full-stack development. I love hackathons, open-source, and turning ideas into working prototypes overnight.</p><div class="am"><div class="ami"><strong>Location</strong>Austin, TX</div><div class="ami"><strong>Email</strong><a href="mailto:you@university.edu">you@university.edu</a></div></div></div><div class="av2"></div></div></div></section>
+<section class="skills" id="skills" ><div class="c"><h2>Skills</h2><div class="sg"><span class="st sp">Python</span><span class="st sd">JavaScript</span><span class="st so">React</span><span class="st sp">SQL</span><span class="st sd">Git</span><span class="st so">TensorFlow</span><span class="st sp">Figma</span><span class="st sd">REST APIs</span></div></div></section>
+<section class="projects" id="projects" style="background:#f0f9ff;color:inherit"><div class="c"><h2>Projects</h2><div class="pg"><div class="pc"><div class="pt">🚀</div><div class="pb"><h3>Campus Event App</h3><p>React Native app for discovering campus events. Used by 500+ students.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">⚡</div><div class="pb"><h3>ML Study Buddy</h3><p>GPT-powered study assistant that summarises lecture notes. Hackathon winner.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">⚙️</div><div class="pb"><h3>Open Source Library</h3><p>Utility library for date formatting with 200+ weekly npm downloads.</p><div class="pl"> </div></div></div></div></div></section>
+<section class="contact" id="contact" ><div class="c"><h2>Say hello</h2><p class="sub">Looking for Summer 2025 internships and entry-level roles.</p><div class="cl"><a href="mailto:you@university.edu">✉ Email</a><a href="https://linkedin.com" target="_blank">in LinkedIn</a><a href="https://github.com" target="_blank">◎ GitHub</a></div></div></section>
+<footer ><p>2025 Your Name</p></footer>
+<script>
+  const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('section,footer').forEach(el=>{el.classList.add('fade-block');obs.observe(el);});
+</script>
+</body>
+</html>
